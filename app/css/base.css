@@ -1,0 +1,62 @@
+*, *:after, *:before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*::selection {
+	background-color: rgba(20, 20, 20, .8);
+}
+*.inversion-select::selection {
+	color: black;
+	background-color: rgba(20, 180, 250, .9);
+}
+
+hr {
+	margin: .5em 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+ul, ol {
+	list-style: none;
+	margin: .5em 0;
+}
+
+p {
+	margin: 1.5em 0 0;
+	line-height: 1.4;
+}
+
+a {
+	text-decoration: none;
+}
+
+mark {
+	background-color: tomato;
+	color: var(--c_dark);
+}
+
+body {
+	font-family: 'Rubik', 'Arial', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: black;
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: rgba(230, 230, 230, .3);
+}

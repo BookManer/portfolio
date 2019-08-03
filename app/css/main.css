@@ -1,0 +1,297 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+@import 'variables.css';
+@import 'base.css';
+
+/* Animations */
+@import 'animate.css';
+
+.header {
+	position: sticky;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "navbar"
+						 "banner-text";
+
+	align-items: center;
+
+	width: 100%;
+	height: 100vh;
+
+	background-image: url('/img/bg/bg_banner.jpg'), linear-gradient(to bottom, transparent 0%, black 100%);
+	background-blend-mode: color;
+	background-size: cover;
+}
+.header__social-icon {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+
+	transition: transform .5s ease;
+}
+.header__social-icon:hover,
+.header__social-icon:focus {
+	transform: scale(1.5) rotate(360deg);
+}
+.header__social-icon:not(:first-of-type) {
+	margin-left: 1em;
+}
+.header__text-wrapp {
+	grid-area: banner-text;
+	width: fit-content;
+
+	margin: 0 auto;
+
+	text-align: center;
+	color: white;
+}
+.header__name {
+	font-weight: 300;
+	font-size: 3em;
+
+	color: white;
+}
+.header__short-about {
+	margin: 1em 0 2em 0;
+
+	color: lightgray;
+}
+
+.navbar {
+	grid-area: navbar;
+	width: fit-content;
+}
+.navbar__menu {
+	position: relative;
+
+	margin: 0;
+}
+.navbar__item {
+	display: inline-block;
+
+}
+.navbar__link {
+	position: relative;
+	display: block;
+	padding: .5em 1em;
+
+	transition: transform .4s ease-out;
+	transform: translateY(-100%);
+
+	color: white;
+	border: 4px solid tomato;
+	box-shadow: 0px 0px 40px 0 tomato;
+}
+.navbar__item:nth-of-type(2) .navbar__link {
+	box-shadow: 0px 0px 40px 0 red;
+}
+.navbar__item:last-of-type .navbar__link {
+	box-shadow: 0px 0px 40px 0 violet;
+}
+.navbar__link:after {
+	content: "";
+	position: absolute;
+
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 100%);
+
+	width: 2.5em;
+	height: 2.5em;
+
+	background-image: linear-gradient(to right, tomato 50%, red 50%, red);
+	clip-path: polygon(0 0, 0 100%, 50% 50%, 100% 100%, 100% 0);
+}
+.navbar__link:hover,
+.navbar__link:focus {
+	transform: translateY(0%);
+}
+
+.about {
+	position: relative;
+	/*display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "about .";*/
+	display: flex;
+	justify-content: flex-start;
+	height: auto;
+		
+	transition: all 1s ease;
+	
+	color: white;
+	background-color: black;
+}
+
+.about-block {
+	/*grid-area: about;*/
+	width: 50%;
+	padding: 3em;
+}
+.about__author-img {
+	position: absolute;
+	top: 0;
+	right: -5%;
+	width: 50%;
+	height: 100%;
+
+	transition: background-position, background-size 1s ease;
+
+	background-image: repeating-linear-gradient(135deg, black, black 15px, white 15px, white 30px),
+					  repeating-linear-gradient(45deg, black, black 15px, tomato 15px, tomato 30px),
+					  url(/img/bg/bg_author.png);
+	transition-delay: 0s, 1s;
+	background-repeat: no-repeat;
+	background-blend-mode: color;
+	/*background-position: top 35% left -500px, top 35% left 500px, right 0 bottom 0;
+	background-size: 100% 150px, 100% 150px, auto 100%;*/
+	background-position: top 35% left -200px, top 35% left 180px, right 0 bottom 0;
+	background-size: 100% 100%, 100% 100%, auto 100%;
+}
+/*.about__author-img:hover {
+	background-position: top 35% left -200px, top 35% left 180px, right 0 bottom 0;
+	background-size: 100% 100%, 100% 100%, auto 100%;
+}*/
+.about-block__title {
+	margin: 2em 0 0;
+	transform: translateX(50%);
+	text-transform: uppercase;
+	opacity: 0;
+}
+.about-block__title:first-of-type {
+	margin-top: 0;
+}
+.about-block__contact-block {
+	margin: 1em 0;
+	transform: translateX(-50%);
+	color: lightgray;
+	opacity: 0;
+}
+.about-block__contact-wrapp:not(:last-of-type) {
+	margin-bottom: .25em;
+}
+.about-block__contact-name {
+	display: inline-block;
+	min-width: 6em
+}
+.about-block__descr-about {
+	color: gray;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+.about-block__stack-tech {
+	display: inline-block;
+	
+	padding: .2em .6em;
+	margin: .25em 0;
+
+	color: white;
+	background-color: tomato;
+	border-radius: 10px;
+
+	clip-path: inset(0px 0px 0px 0px);
+
+	user-select: none;
+}
+.about-block__stack-tech:not(:first-of-type) {
+	margin-left: .5em;
+}
+
+.circle-progressbar {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	transition: all .4s ease-in-out;
+}
+.circle-progressbar:hover {
+	transform: rotate(360deg) scale(1.4);
+}
+.progressbar-wrapp {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+
+	margin-bottom: 1em;
+}
+.progressbar-name {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.progressbar-total {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.circle-progressbar:after {
+	content: attr(tech-name);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	color: white;
+	text-transform: uppercase;
+}
+.circle-progressbar .progress-track {
+	fill: none;
+	stroke: #78bec7;
+	stroke-dasharray: 0 200;
+	stroke-linecap: round;
+	stroke-width: 5px;
+	
+	transition: all 1.6s cubic-bezier(.65,-0.2,1,.61);
+}
+
+.progressbar-wrapp:nth-of-type(2) .progress-track { transition-delay: .15s; }
+.progressbar-wrapp:nth-of-type(3) .progress-track { transition-delay: .3s; }
+.progressbar-wrapp:nth-of-type(4) .progress-track { transition-delay: .45s; }
+.progressbar-wrapp:nth-of-type(5) .progress-track { transition-delay: .6s; }
+.progressbar-wrapp:nth-of-type(6) .progress-track { transition-delay: .75s; }
+.progressbar-wrapp:nth-of-type(7) .progress-track { transition-delay: .90s; }
+.progressbar-wrapp:nth-of-type(8) .progress-track { transition-delay: 1.05s; }
+
+#progress-html circle{
+	stroke: orange;
+}
+#progress-css circle{
+	stroke: blue;
+}
+#progress-sass circle{
+	stroke: pink;
+}
+#progress-js circle{
+	stroke: yellow;
+}
+#progress-js circle{
+	stroke: yellow;
+}
+#progress-gulp circle{
+	stroke: red;
+}
+#progress-webpack circle{
+	stroke: darkblue;
+}
+#progress-webpack circle{
+	stroke: white;
+}
+#progress-webpack circle{
+	stroke: darkblue;
+}
+#progress-wordpress circle{
+	stroke: white;
+}
+#progress-git circle{
+	stroke: rgba(120, 250, 100, .8);
+}
+
+/* Atomar css classes */
+.no-select {
+	user-select: none;
+}

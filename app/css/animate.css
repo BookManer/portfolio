@@ -1,0 +1,30 @@
+.about-block__title.animation,
+.about-block__contact-block.animation {
+	transition: all 1s ease-in-out;
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.about-block__descr-about.animation {
+	transition: all 1s ease-in-out;
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.about-block__stack-list.animation .about-block__stack-tech {
+	clip-path: polygon(0 0, 0 2%, 2% 2%, 2% 0);
+	clip-path: inset(0px 0px 0px 0px);
+	animation: clipPathToRight 2s ease 1;
+}
+
+@keyframes clipPathToRight{
+	0% {
+		clip-path: inset(0px 99% 99% 0px);
+	}
+	50% {
+		clip-path: inset(0px 99% 0px 0px);
+	}
+	100% {
+		clip-path: inset(0px 0px 0px 0px);
+	}
+}
