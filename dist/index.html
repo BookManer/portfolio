@@ -47,18 +47,16 @@
 				
 			<hr>
 			
-			<p class="about-block__descr-about inversion-select js-waiting-animation" tabindex=0>Привет! Мне 18 и я занимаюсь версткой сайтов уже более 2 лет.<br>Я учусь на 3 курсе в коллежде и стараюсь совмещать учёбу с развитием в вебе.<br>В последнее время я стал много кататься на велосипеде и кажется мне это очень нравиться, так что в будущем я бы хотел купить себе хороший горный велосипед и наматывать киллометры, катаясь по городу. Ах да! Я из Вологды :)</p>
+			<!-- <p class="about-block__descr-about inversion-select js-waiting-animation" tabindex=0>Привет! Мне 18 и я занимаюсь версткой сайтов уже более 2 лет.<br>Я учусь на 3 курсе в коллежде и стараюсь совмещать учёбу с развитием в вебе.<br>Я целеустремлённый, ответсвенный, немного ленивый, общительный :)</p>
 
-			<p class="about-block__descr-about inversion-select js-waiting-animation" tabindex=0>Есть довольно интересный опыт в веб-студии, где был следующий стек технологий:</p>
-			
-			<ul class="about-block__stack-list js-waiting-animation" tabindex=0>
-				<li class="about-block__stack-tech">HTML</li>
-				<li class="about-block__stack-tech">CSS</li>
-				<li class="about-block__stack-tech">JavaScript</li>
-				<li class="about-block__stack-tech">PHP</li>
-				<li class="about-block__stack-tech">Wordpress</li>
-				<li class="about-block__stack-tech">Bitrix24</li>
-			</ul>
+			<p class="about-block__descr-about inversion-select js-waiting-animation" tabindex=0>Есть довольно интересный опыт в веб-студии, где был следующий стек технологий:</p> -->
+
+			<p class="about-block__descr-about inversion-select js-waiting-animation">
+				Меня зовут Андрей. Мне 18 и мне очень интересна тема фронтенда и программирования в целом. Программировать я начал с 7 класса, перепробовал несколько языков программирования(Java, C++, C#) в разных сферах, но фронтенд больше зацепил, поэтому я решил серьёзно заниматься этим и зарабатывать.
+			</p>
+			<p class="about-block__descr-about inversion-select js-waiting-animation">
+				Учусь я в Вологде, перешёл на 3 курс колледжа. Помимо фронтенда, верстки пробую саморазвиваться в сторону английского языка, тайменджмента, психологии, поскольку это тоже немаловажные навыки в жизни. Английский сейчас нужен везде, часто интересные темы в интернете именно на нём, но само незнание языка отпугивает меня, поэтому я решил изучить его хотя бы до B2. Тайменджмент это вообще то, что должен знать каждый, на мой взгляд. Я для себя заметил, что я слишком много времени трачу впустую. Психология поможет мне разбираться в проблемах в человеческих отношениях, также пригодиться в общении с заказчиками :)
+			</p>
 			
 			<h2 class="about-block__title js-waiting-animation">Навыки</h2>
 
@@ -67,6 +65,15 @@
 					<figcaption class="progressbar-name">HTML</figcaption>
 					<strong class="progressbar-total" data-total="85">0%</strong>
 					<svg id="progress-html" tabindex=0 class="circle-progressbar" data-tech-name="html" aria-label="знания html(гипертекстового языка разметки) 85 процентов">
+						<g>
+							<circle class="progress-track" r="30" fill="none" cy="50%" cx="50%" />
+						</g>
+					</svg>
+				</figure>
+				<figure class="progressbar-wrapp">
+					<figcaption class="progressbar-name">Pug</figcaption>
+					<strong class="progressbar-total" data-total="100">0%</strong>
+					<svg id="progress-pug" tabindex=0 class="circle-progressbar" data-tech-name="html" aria-label="шаблонизатор паг 10 процентов">
 						<g>
 							<circle class="progress-track" r="30" fill="none" cy="50%" cx="50%" />
 						</g>
@@ -138,9 +145,100 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="works">
+		<h2 class="works__title">Мои работы</h2>
+		<div class="works__slider slider">
+			<figure class="slider__presentation-block presentation-block">
+				<img class="presentation-block__wrapper" src="/img/bg/laptop-wrapper-slider.png" alt="laptop">
+				<div class="presentation-block__view-wrapp">
+					<div class="presentation-block__container">
+						<div class="presentation-block__slide" data-image="/img/bg/bg-slide-site-1.jpg"></div>
+						<div class="presentation-block__slide" data-image="/img/bg/bg-slide-site-2.jpg"></div>
+						<!-- <div class="presentation-block__slide" data-image="/img/bg/bg-slide-site-3.jpg"></div>
+						<div class="presentation-block__slide" data-image="/img/bg/bg-slide-site-4.jpg"></div> -->
+						<div class="presentation-block__slide" data-image="/img/bg/bg-slide-site-5.jpg"></div>
+					</div>
+				</div>
+				<svg class="presentation-block__arrow arrow arrow--left"><use xlink:href="/img/icons/arrow.svg#arrow"></use></svg>
+				<svg class="presentation-block__arrow arrow arrow--right"><use xlink:href="/img/icons/arrow.svg#arrow"></use></svg>
+			</figure>
+
+			<div class="slider__slider-descr slider-descr js-waiting-animation">
+				<div class="wrapp-slide-block active">
+					<h3 class="slider-descr__name-work"><a href="bioniks-med.ru" target="_blank">Bioniks-med</a></h3>
+					
+					<p class="slide-descr__descr">Landing page под ключ. Первая полноценная работа в <a href="https://place-start.ru/" target="_blank">веб-студии</a><br>Сетка свёрстана с помощью bootstrap 4, это был мой первый раз как я попробовал её. В ходе разработки получил огромный опыт в общении с дизайнерами и остальными разработчиками отдела.</p>
+					<p class="slide-descr__descr">В ходе разработки использовались следующие технологии:</p>
+					
+					<ul class="slider-descr__stack-list stack-list stack-list">
+						<li class="stack-list__stack-tech">HTML</li>
+						<li class="stack-list__stack-tech">SASS</li>
+						<li class="stack-list__stack-tech">JavaScript</li>
+						<li class="stack-list__stack-tech">Bootstrap 4</li>
+						<li class="stack-list__stack-tech">Jquery</li>
+						<li class="stack-list__stack-tech">Wordpress</li>
+					</ul>
+				</div>
+				<div class="wrapp-slide-block">
+					<h3 class="slider-descr__name-work"><a href="https://opioids.fallcatcher.com/" target="_blank">Fallcatcher</a></h3>
+					
+					<p class="slide-descr__descr">Это моя вторая выполненная работа на фрилансе. Здесь моя задача была - сверстать главную страницу для уже существующего многостраничника. Во время выполнения работы я получил бесценный опыт в общении с заказчиком. Данную работу заказчик высоко оценил, но, к сожалению, отзыв не оставил, поэтому Вам придётся поверить на слово ;)</p>
+					<p class="slide-descr__descr">В ходе разработки использовались следующие технологии:</p>
+					
+					<ul class="slider-descr__stack-list stack-list stack-list">
+						<li class="stack-list__stack-tech">HTML</li>
+						<li class="stack-list__stack-tech">CSS</li>
+						<li class="stack-list__stack-tech">LESS</li>
+						<li class="stack-list__stack-tech">JavaScript</li>
+						<li class="stack-list__stack-tech">Jquery</li>
+					</ul>
+				</div>
+				<!-- <div class="wrapp-slide-block">
+					<h3 class="slider-descr__name-work"><a href="http://n900555x.beget.tech/" target="_blank">Фитнес клуб the life</a></h3>
+					
+					<p class="slide-descr__descr">Многостраничный сайт для фитнес клуба The Life. На данный момент сайт находиться в разработке, поскольку до сих пор поступаюсь правки как по контенту, так и касающиеся лаяута сайта. Тем не менее, работу можно посмотреть.<br>В этом проекте я извлёк опыт в тайменеджменте, тобишь мне приходилось(хех) ставить задачи, определять сроки и успевать выполнять текущий спринт. Для контроля над задачами использовался Youtrack. В основном задачи ставились моим рукаводством, иногда самому приходилось.</p>
+					<p class="slide-descr__descr">В ходе разработки использовались следующие технологии:</p>
+					
+					<ul class="slider-descr__stack-list stack-list stack-list">
+						<li class="stack-list__stack-tech">PUG</li>
+						<li class="stack-list__stack-tech">SASS</li>
+						<li class="stack-list__stack-tech">JavaScript</li>
+						<li class="stack-list__stack-tech">Animate.js</li>
+						<li class="stack-list__stack-tech">rellax.js</li>
+					</ul>
+				</div>
+				<div class="wrapp-slide-block">
+					<h3 class="slider-descr__name-work">Худеем вместе</h3>
+					
+					<p class="slide-descr__descr">Landing page. Страница для привлечения потенциальных клиентов на основной сайт, а также мобильного приложения.</p>
+					<p class="slide-descr__descr">В ходе разработки использовались следующие технологии:</p>
+					
+					<ul class="slider-descr__stack-list stack-list stack-list">
+						<li class="stack-list__stack-tech">HTML</li>
+						<li class="stack-list__stack-tech">CSS</li>
+						<li class="stack-list__stack-tech">JavaScript</li>
+						<li class="stack-list__stack-tech">slick.js</li>
+					</ul>
+				</div> -->
+				<div class="wrapp-slide-block">
+					<h3 class="slider-descr__name-work">Мир ванных комнат</h3>
+					
+					<p class="slide-descr__descr">Сайт-визитка. Довольно печальный опыт, эта работа так и не увидела свет на сервере заказчика, поскольку меня КОНКРЕТНО кинули. Зачем я выкладываю её? Просто потому, что за все время верстки у меня не так много реальных работ, в большинстве случаев это обычные шаблонные сайты, которые верстают для тренировки.</p>
+					<p class="slide-descr__descr">В ходе разработки использовались следующие технологии:</p>
+					
+					<ul class="stack-list">
+						<li class="stack-list__stack-tech">HTML</li>
+						<li class="stack-list__stack-tech">СSS</li>
+						<li class="stack-list__stack-tech">JavaScript</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	<script src="/lib/rellax-master/rellax.min.js"></script>
-	<script src="/js/main.js"></script>
+	<script src="/js/main.js" type="module"></script>
 	<script>
 		var rellax = new Rellax('.rellax', {
 			    center: true,

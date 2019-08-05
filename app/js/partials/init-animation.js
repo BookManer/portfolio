@@ -1,16 +1,17 @@
-var waitings = document.querySelectorAll("[class $='waiting-animation']");
+let waitings = document.querySelectorAll("[class $='waiting-animation']");
+console.log(waitings);
 
-window.addEventListener("scroll", function(event) {
-	Array.prototype.forEach.call(waitings, function(elementAnimation) {
+window.addEventListener("scroll", (event) => {
+	Array.prototype.forEach.call(waitings, (elementAnimation) => {
 		let top = elementAnimation.offsetTop;
 
-		if(window.pageYOffset > top && elementAnimation.classList.contains("js-waiting-animaiton")) {
+		if(window.pageYOffset > top) {
 			elementAnimation.classList.add("animation");
-			elementAnimation.classList.remove("js-waiting-animaiton");
 
 			if(elementAnimation.id === 'progressbars') {
 				let progressbars = elementAnimation.children;
-				Array.prototype.forEach.call(progressbars, function(progressbar) {
+
+				Array.prototype.forEach.call(progressbars, (progressbar) => {
 					setUpTotalProgressbar(progressbar.children[2].children[0].firstElementChild, parseInt(progressbar.children[1].dataset.total));
 					progressbar.children[1].innerHTML = `${progressbar.children[1].dataset.total}%`;
 				});

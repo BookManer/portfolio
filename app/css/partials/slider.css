@@ -1,0 +1,122 @@
+/* Block slider */
+.slider {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "presentation descr";
+	align-items: center;
+	grid-column-gap: 3em;
+
+	margin-top: 3em;
+
+	max-width: 1440px;
+}
+/* End block slider */
+
+
+/* Block presentation-block */
+.presentation-block {
+	position: relative;
+	grid-area: presentation;
+}
+.presentation-block__view-wrapp {
+	position: absolute;
+	top: 8%;
+	left: 17.5%;
+	
+	width: 65%;
+	height: 75.5%;
+
+	overflow: hidden;
+}
+.presentation-block__container {
+	position: absolute;
+	display: flex;
+	flex-wrap: nowrap;
+	width: calc(100%*3);
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: all 1s ease-in-out;
+}
+.presentation-block__slide {
+	width: 100%;
+	height: 100%;
+
+	background-image: url('/img/bg/bg-slide-site-1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.presentation-block__arrow {
+	position: absolute;
+	top: 50%;
+
+	transition: all .4s ease-in-out;
+	
+	opacity: 0;
+}
+.presentation-block__arrow:first-of-type {
+	left: 25%;
+	transform: rotate(180deg);
+}
+.presentation-block:hover .presentation-block__arrow:first-of-type {
+	left: 5%;
+	opacity: 1;
+} 
+.presentation-block__arrow:last-of-type {
+	right: 25%;
+}
+
+.presentation-block:hover .presentation-block__arrow:last-of-type {
+	right: 5%;
+	opacity: 1;
+} 
+/* End block presentation-block */
+
+
+
+/* Block slider-descr */
+.slider-descr {
+	position: relative;
+	grid-area: descr;
+}
+.slider-descr__name-work a {
+	color: var(--c_dark);
+	text-decoration: underline;
+}
+.slider-descr__name-work {
+	font-weight: 500;
+}
+/* End block slider-descr */
+
+/* Block wrapp-slide-block */
+.wrapp-slide-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .7s ease-in-out;
+	opacity: 0;
+	z-index: -1;
+}
+.wrapp-slide-block.active {
+	position: static;
+	z-index: 0;
+	opacity: 1;
+}
+.wrapp-slide-block.active .stack-list__stack-tech {
+	transition-delay: 1.2s;
+}
+/* End block wrapp-slide-block */
+
+/* Block arrow */
+.arrow {
+	width: 32px;
+	height: 40px;
+
+	cursor: pointer;
+}
+.arrow--left {
+	transform-origin: center;
+	transform: rotate(180deg);
+}
+/* End block arrow */

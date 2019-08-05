@@ -5,16 +5,31 @@
 	opacity: 1;
 }
 
+.header__name.animation {
+	transform: translateX(0) skewX();
+	opacity: 0;
+}
+.header__short-about.animation {
+	transform: translateX(0) skewX();
+	opacity: 0;
+}
+
 .about-block__descr-about.animation {
 	transition: all 1s ease-in-out;
 	transform: translateY(0);
 	opacity: 1;
 }
 
-.about-block__stack-list.animation .about-block__stack-tech {
+.stack-list.animation .stack-list__stack-tech,
+.slider-descr.animation .stack-list__stack-tech,
+.slider-descr.animation .wrapp-slide-block.active .stack-list__stack-tech {
 	clip-path: polygon(0 0, 0 2%, 2% 2%, 2% 0);
 	clip-path: inset(0px 0px 0px 0px);
 	animation: clipPathToRight 2s ease 1;
+}
+
+.slider-descr.transition {
+	animation: swapToRight 1s ease-in-out 1;
 }
 
 @keyframes clipPathToRight{
@@ -26,5 +41,37 @@
 	}
 	100% {
 		clip-path: inset(0px 0px 0px 0px);
+	}
+}
+
+@keyframes swapToRight {
+	0%, 100% {
+		clip-path: inset(0 0 0 0);
+	}
+	50% {
+		clip-path: inset(0 0 0 100%);
+		transition-delay: .5s;
+	}
+}
+
+@keyframes slideNinjaToRight {
+	0% {
+		transform: translateX(-150%) skewX(45deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) skewX(0deg);
+		opacity: 1;
+	}
+}
+
+@keyframes slideNinjaToLeft {
+	0% {
+		transform: translateX(150%) skewX(-45deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) skewX(0deg);
+		opacity: 1;
 	}
 }

@@ -44,7 +44,7 @@ gulp.task("css:dev", function() {
 })
 
 gulp.task('img', function() {
-    return gulp.src(PATH.app + "img/**/*")
+    return gulp.src(PATH.app + "img/**/*![.svg]")
         .pipe(imagemin({
             interlaced: true,
             progressive: true,

@@ -3,6 +3,7 @@
 
 @import 'variables.css';
 @import 'base.css';
+@import 'partials/slider.css';
 
 /* Animations */
 @import 'animate.css';
@@ -50,13 +51,23 @@
 .header__name {
 	font-weight: 300;
 	font-size: 3em;
-
+	
+	transform: translateX(0) skewX(0deg);
 	color: white;
+
+	opacity: 1;
+
+	animation: slideNinjaToRight 1s cubic-bezier(1,-0.04,1,.77);
 }
 .header__short-about {
 	margin: 1em 0 2em 0;
 
+	transform: translateX(0) skewX(0deg);
 	color: lightgray;
+
+	opacity: 1;
+
+	animation: slideNinjaToLeft 1s cubic-bezier(1,-0.04,1,.77) .3s;
 }
 
 .navbar {
@@ -155,6 +166,7 @@
 	background-size: 100% 100%, 100% 100%, auto 100%;
 }*/
 .about-block__title {
+	font-weight: 400;
 	margin: 2em 0 0;
 	transform: translateX(50%);
 	text-transform: uppercase;
@@ -166,7 +178,7 @@
 .about-block__contact-block {
 	margin: 1em 0;
 	transform: translateX(-50%);
-	color: lightgray;
+	color: gray;
 	opacity: 0;
 }
 .about-block__contact-wrapp:not(:last-of-type) {
@@ -177,11 +189,11 @@
 	min-width: 6em
 }
 .about-block__descr-about {
-	color: gray;
+	color: lightgray;
 	transform: translateY(-50%);
 	opacity: 0;
 }
-.about-block__stack-tech {
+.stack-list__stack-tech {
 	display: inline-block;
 	
 	padding: .2em .6em;
@@ -195,7 +207,7 @@
 
 	user-select: none;
 }
-.about-block__stack-tech:not(:first-of-type) {
+.stack-list__stack-tech:not(:first-of-type) {
 	margin-left: .5em;
 }
 
@@ -260,14 +272,14 @@
 #progress-html circle{
 	stroke: orange;
 }
+#progress-pug circle{
+	stroke: brown;
+}
 #progress-css circle{
 	stroke: blue;
 }
 #progress-sass circle{
 	stroke: pink;
-}
-#progress-js circle{
-	stroke: yellow;
 }
 #progress-js circle{
 	stroke: yellow;
@@ -290,6 +302,21 @@
 #progress-git circle{
 	stroke: rgba(120, 250, 100, .8);
 }
+
+
+.works {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	height: 100vh;
+	padding: 3em;
+}
+.works__title {
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 
 /* Atomar css classes */
 .no-select {

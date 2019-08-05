@@ -6,6 +6,7 @@
 
 *::selection {
 	background-color: rgba(20, 20, 20, .8);
+	color: white;
 }
 *.inversion-select::selection {
 	color: black;
